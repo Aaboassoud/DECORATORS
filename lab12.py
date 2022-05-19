@@ -1,6 +1,3 @@
-from re import A
-
-
 def decr(enter_phrase):
     def wrapper(*args):
         if type(*args) != str:
@@ -9,7 +6,7 @@ def decr(enter_phrase):
             raise ValueError("the argument should be str and it should have more than 5 characters")
         else:
             print("good phrase ")
-        return enter_phrase(*args)
+        return enter_phrase(args)
     return wrapper
 
 @decr
